@@ -1,0 +1,18 @@
+COLUMN TABLE "Bills" ( 
+  "Bill Id" INTEGER NOT NULL,
+  "Customer Id" INTEGER NOT NULL,
+  "Bill Date" DATE,
+  "Bill Amount" DECIMAL(10,2),
+  "Previous Bill Amount" DECIMAL(10,2),
+  "Payment Received" DATE,
+  "Bill Meter" INTEGER,
+  "Previous Meter" INTEGER,
+  "Usage" INTEGER,
+  "BTU Factor" DECIMAL(8,3),
+  "Therms" INTEGER,
+  "Price Per Therm" DECIMAL(10,2),
+  "Consumption Charge" DECIMAL(10,2),
+  "Service Charge" DECIMAL(10,2),
+  "Pass Through Charges" DECIMAL(10,2),
+  "Taxes" DECIMAL(10,2),
+  PRIMARY KEY ("Bill Id"))

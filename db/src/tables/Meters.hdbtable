@@ -1,0 +1,5 @@
+COLUMN TABLE "Meters" (
+  "Meter Id" INTEGER NOT NULL,
+  "Meter Type" VARCHAR(45),
+  "Serial Number" VARCHAR(45),
+  PRIMARY KEY ("Meter Id"))

@@ -1,0 +1,324 @@
+{
+	"format_version": 1,
+	"imports": [{
+		"target_table": "Bills",
+		"source_data": {
+			"data_type": "CSV",
+			"file_name": "Bills.csv",
+			"has_header": false,
+			"dialect": "HANA",
+			"type_config": {
+				"delimiter": ","
+			}
+		},
+		"import_settings": {
+         	"include_filter" : [ ],		
+			"import_columns": [
+			     "Bill Id"
+				,"Customer Id"
+				,"Bill Date"
+				,"Bill Amount"
+				,"Previous Bill Amount"
+				,"Payment Received"
+				,"Bill Meter"
+				,"Previous Meter"
+				,"Usage"
+				,"BTU Factor"
+				,"Therms"
+				,"Price Per Therm"
+				,"Consumption Charge"
+				,"Service Charge"
+				,"Pass Through Charges"
+				,"Taxes"
+			]
+		},
+		"column_mappings": {
+		     "Bill Id" : 1
+			,"Customer Id": 2
+			,"Bill Date" : 3
+			,"Bill Amount" : 4
+			,"Previous Bill Amount" : 5
+			,"Payment Received" : 6
+			,"Bill Meter" : 7
+			,"Previous Meter" : 8
+			,"Usage" : 9
+			,"BTU Factor": 10
+			,"Therms" : 11
+			,"Price Per Therm" : 12
+			,"Consumption Charge" : 13
+			,"Service Charge" : 14
+			,"Pass Through Charges" : 15
+			,"Taxes" : 16
+		}
+	},{
+		"target_table": "Addresses",
+		"source_data": {
+			"data_type": "CSV",
+			"file_name": "Addresses.csv",
+			"has_header": false,
+			"dialect": "HANA",
+			"type_config": {
+				"delimiter": ","
+			}
+		},
+		"import_settings": {
+         	"include_filter" : [ ],		
+			"import_columns": [
+			    "Address Id"
+				,"Number"
+				,"Street"
+				,"Unit"
+				,"City"
+				,"State"
+				,"Zip"
+				,"Longitude"
+				,"Latitude"
+				,"Point"
+			]
+		},
+		"column_mappings": {
+			    "Address Id" : 1
+				,"Number" : 2
+				,"Street" : 3
+				,"Unit" : 4
+				,"City" : 5
+				,"State" : 6
+				,"Zip" : 7
+				,"Longitude" : 8
+				,"Latitude" : 9
+				,"Point" : 10
+		}
+	},{
+		"target_table": "Customers",
+		"source_data": {
+			"data_type": "CSV",
+			"file_name": "Customers.csv",
+			"has_header": false,
+			"dialect": "HANA",
+			"type_config": {
+				"delimiter": ","
+			}
+		},
+		"import_settings": {
+         	"include_filter" : [ ],		
+			"import_columns": [
+			     "Customer Id"
+				,"First Name"
+				,"Last Name"
+				,"Telephone"
+				,"Email"
+				,"Gender"
+				,"Customer Since"
+				,"IP Address"
+			]
+		},
+		"column_mappings": {
+			     "Customer Id" : 1
+				,"First Name" : 2
+				,"Last Name" : 3
+				,"Telephone" : 4
+				,"Email" : 5
+				,"Gender" : 6
+				,"Customer Since" : 7
+				,"IP Address" :8
+		}
+	},{
+		"target_table": "Address Customer Rel",
+		"source_data": {
+			"data_type": "CSV",
+			"file_name": "AddressCustomerRel.csv",
+			"has_header": false,
+			"dialect": "HANA",
+			"type_config": {
+				"delimiter": ","
+			}
+		},
+		"import_settings": {
+         	"include_filter" : [ ],		
+			"import_columns": [
+				 "ACR Id"
+				,"Address Id"
+				,"Customer Id"
+				,"Move In Date"
+				,"Move Out Date"
+				,"Active Ind"
+			]
+		},
+		"column_mappings": {
+			 "ACR Id" : 1
+			,"Address Id" : 2
+			,"Customer Id" : 3
+			,"Move In Date" : 4
+			,"Move Out Date" : 5
+			,"Active Ind" : 6
+		}
+	},{
+		"target_table": "Meters",
+		"source_data": {
+			"data_type": "CSV",
+			"file_name": "Meters.csv",
+			"has_header": false,
+			"dialect": "HANA",
+			"type_config": {
+				"delimiter": ","
+			}
+		},
+		"import_settings": {
+         	"include_filter" : [ ],		
+			"import_columns": [
+				"Meter Id"
+				,"Meter Type"
+				,"Serial Number"
+			]
+		},
+		"column_mappings": {
+			"Meter Id" : 1
+			,"Meter Type" : 2
+			,"Serial Number" : 3
+		}
+	},{
+		"target_table": "Address Meter Rel",
+		"source_data": {
+			"data_type": "CSV",
+			"file_name": "AddressMeterRel.csv",
+			"has_header": false,
+			"dialect": "HANA",
+			"type_config": {
+				"delimiter": ","
+			}
+		},
+		"import_settings": {
+         	"include_filter" : [ ],		
+			"import_columns": [
+				"AMR Id"
+				,"Address Id"
+				,"Meter Id"
+				,"Commissioned Date"
+				,"Decommissioned Date"
+				,"Active Ind" 
+			]
+		},
+		"column_mappings": {
+			"AMR Id" : 1
+			,"Address Id" : 2
+			,"Meter Id" : 3
+			,"Commissioned Date" : 4
+			,"Decommissioned Date" : 5
+			,"Active Ind" : 6
+		}
+	},{
+		"target_table": "Customer Meter Rel",
+		"source_data": {
+			"data_type": "CSV",
+			"file_name": "CustomerMeterRel.csv",
+			"has_header": false,
+			"dialect": "HANA",
+			"type_config": {
+				"delimiter": ","
+			}
+		},
+		"import_settings": {
+         	"include_filter" : [ ],		
+			"import_columns": [
+				"CMR Id"
+				,"Meter Id"
+				,"Customer Id"
+				,"Activation Date"
+				,"Termination Date"
+				,"Active Ind"
+			]
+		},
+		"column_mappings": {
+			"CMR Id" : 1
+			,"Meter Id" : 2
+			,"Customer Id" : 3
+			,"Activation Date" : 4
+			,"Termination Date" : 5
+			,"Active Ind" : 6
+		}
+	},{
+		"target_table": "Meter Readings",
+		"source_data": {
+			"data_type": "CSV",
+			"file_name": "MeterReadings.csv",
+			"has_header": false,
+			"dialect": "HANA",
+			"type_config": {
+				"delimiter": ","
+			}
+		},
+		"import_settings": {
+         	"include_filter" : [ ],		
+			"import_columns": [
+				"Reading Id"
+				,"Meter ID"
+				,"Reading Timestamp"
+				,"Reading"
+				,"UOM"
+			]
+		},
+		"column_mappings": {
+			"Reading Id" : 1
+			,"Meter ID" : 2
+			,"Reading Timestamp" : 3
+			,"Reading" : 4
+			,"UOM" : 5
+		}
+	},{
+		"target_table": "Census Counties",
+		"source_data": {
+			"data_type": "CSV",
+			"file_name": "CensusCounties.csv",
+			"has_header": false,
+			"dialect": "HANA",
+			"type_config": {
+				"delimiter": ","
+			}
+		},
+		"import_settings": {
+         	"include_filter" : [ ],		
+			"import_columns": [
+				"STATEFP"
+				,"COUNTYFP"
+				,"COUNTYNS"
+				,"GEOID"
+				,"NAME"
+				,"NAMELSAD"
+				,"LSAD"
+				,"CLASSFP"
+				,"MTFCC"
+				,"CSAFP"
+				,"CBSAFP"
+				,"METDIVFP"
+				,"FUNCSTAT"
+				,"ALAND"
+				,"AWATER"
+				,"INTPTLAT"
+				,"INTPTLON"
+				,"SHAPE"
+				,"SHAPE_3857"
+			]
+		},
+		"column_mappings": {
+			"STATEFP" : 1
+			,"COUNTYFP" : 2
+			,"COUNTYNS" :3
+			,"GEOID" : 4
+			,"NAME" : 5
+			,"NAMELSAD" : 6
+			,"LSAD" : 7
+			,"CLASSFP" : 8
+			,"MTFCC" : 9
+			,"CSAFP" : 10
+			,"CBSAFP" : 11
+			,"METDIVFP" : 12
+			,"FUNCSTAT" : 13
+			,"ALAND" : 14
+			,"AWATER" : 15
+			,"INTPTLAT" : 16
+			,"INTPTLON" : 17
+			,"SHAPE" : 18
+			,"SHAPE_3857" : 19
+		}
+	}]
+}

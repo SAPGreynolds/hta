@@ -1,0 +1,8 @@
+COLUMN TABLE "Address Meter Rel" (
+  "AMR Id" INTEGER NOT NULL,
+  "Address Id" INTEGER NOT NULL,
+  "Meter Id" INTEGER NOT NULL,
+  "Commissioned Date" DATE NULL,
+  "Decommissioned Date" DATE NULL,
+  "Active Ind" VARCHAR(45),
+  PRIMARY KEY ("AMR Id"))

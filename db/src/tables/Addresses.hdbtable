@@ -1,0 +1,12 @@
+COLUMN TABLE "Addresses" (
+  "Address Id" INTEGER NOT NULL,
+  "Number" VARCHAR(45),
+  "Street" VARCHAR(100),
+  "Unit" VARCHAR(100),
+  "City" VARCHAR(100),
+  "State" VARCHAR(100),
+  "Zip" VARCHAR(10),
+  "Longitude" DECIMAL,
+  "Latitude" DECIMAL,
+  "Point" ST_POINT(3857),
+  PRIMARY KEY ("Address Id"))

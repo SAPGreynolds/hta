@@ -1,0 +1,10 @@
+COLUMN TABLE "Customers" (
+  "Customer Id" INTEGER NOT NULL,
+  "First Name" VARCHAR(45),
+  "Last Name" VARCHAR(45),
+  "Telephone" VARCHAR(45),
+  "Email" VARCHAR(100),
+  "Gender" VARCHAR(45),
+  "Customer Since" DATE NULL,
+  "IP Address" VARCHAR(45),
+  PRIMARY KEY ("Customer Id"))

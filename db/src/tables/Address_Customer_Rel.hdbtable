@@ -1,0 +1,8 @@
+COLUMN TABLE "Address Customer Rel" (
+  "ACR Id" INTEGER NOT NULL,
+  "Address Id" INTEGER NOT NULL,
+  "Customer Id" INTEGER NOT NULL,
+  "Move In Date" DATE NULL,
+  "Move Out Date" DATE NULL,
+  "Active Ind" VARCHAR(10),
+  PRIMARY KEY ("ACR Id"))

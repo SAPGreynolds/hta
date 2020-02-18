@@ -1,0 +1,7 @@
+COLUMN TABLE "Meter Readings" (
+  "Reading Id" INTEGER NOT NULL,
+  "Meter ID" INTEGER,
+  "Reading Timestamp" DATETIME,
+  "Reading" DECIMAL,
+  "UOM" VARCHAR(45),
+  PRIMARY KEY ("Reading Id"))

@@ -1,0 +1,8 @@
+COLUMN TABLE "Customer Meter Rel" (
+  "CMR Id" INTEGER NOT NULL,
+  "Meter Id" INTEGER NOT NULL,
+  "Customer Id" INTEGER NOT NULL,
+  "Activation Date" DATE,
+  "Termination Date" DATE,
+  "Active Ind" VARCHAR(45),
+  PRIMARY KEY ("CMR Id"))
